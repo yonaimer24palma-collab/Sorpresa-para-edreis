@@ -1,1 +1,234 @@
 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Edreys ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #fff5f7;
+  color: #633747;
+  text-align: center;
+}
+
+section {
+  padding: 65px 20px;
+}
+
+h1, h2 {
+  color: #a83259;
+}
+
+p {
+  line-height: 1.8;
+}
+
+#inicio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #ffe0e9, #fff8fa);
+}
+
+.corazon {
+  font-size: 100px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  animation: latido 1.2s infinite;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+button {
+  cursor: pointer;
+}
+
+.boton {
+  background: #a83259;
+  color: white;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 30px;
+  font-size: 17px;
+}
+
+#historia {
+  display: none;
+}
+
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 700px;
+  margin: 25px auto;
+}
+
+.fotos img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px #0002;
+}
+
+.carta, .cita {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px #a8325920;
+}
+
+#finalCita {
+  display: none;
+}
+
+footer {
+  padding: 30px;
+  color: #a83259;
+}
+</style>
+</head>
+
+<body>
+
+<section id="inicio">
+  <h1>Para el amor de mi vida</h1>
+  <p>Tengo una sorpresa para ti, mi amor...</p>
+
+  <button class="corazon" onclick="abrirHistoria()">
+    ❤️
+  </button>
+
+  <p><strong>Toca el corazón, Edreys</strong></p>
+</section>
+
+<main id="historia">
+
+<section>
+  <h1>Mi querida Edreys ❤️</h1>
+  <p>Esta sorpresa es solamente para ti.</p>
+  <p>Porque desde que llegaste a mi vida, nuestra historia se convirtió en algo maravilloso.</p>
+</section>
+
+<section>
+  <h2>Nuestra historia de amor</h2>
+  <h1>7 de octubre de 2012</h1>
+  <p>El día que comenzó nuestra historia, una historia que quiero seguir escribiendo contigo.</p>
+</section>
+
+<section>
+  <h2>Nuestros recuerdos 📸</h2>
+  <p>Cada fotografía guarda un pedacito de nuestra historia.</p>
+
+  <div class="fotos">
+    <img src="foto1.jpg" alt="Nuestro recuerdo 1">
+    <img src="foto2.jpg" alt="Nuestro recuerdo 2">
+    <img src="foto3.jpg" alt="Nuestro recuerdo 3">
+    <img src="foto4.jpg" alt="Nuestro recuerdo 4">
+    <img src="foto5.jpg" alt="Nuestro recuerdo 5">
+    <img src="foto6.jpg" alt="Nuestro recuerdo 6">
+    <img src="foto7.jpg" alt="Nuestro recuerdo 7">
+    <img src="foto8.jpg" alt="Nuestro recuerdo 8">
+    <img src="foto9.jpg" alt="Nuestro recuerdo 9">
+    <img src="foto10.jpg" alt="Nuestro recuerdo 10">
+  </div>
+</section>
+
+<section>
+  <div class="carta">
+    <h2>Una carta para ti, mi amor 💌</h2>
+
+    <p>Mi amada Edreys:</p>
+
+    <p>
+      Hoy quiero recordarte lo importante que eres para mí.
+      Desde aquel 7 de octubre de 2012 comenzó una historia
+      que ha llenado mi vida de recuerdos, aprendizajes y amor.
+    </p>
+
+    <p>
+      Le doy gracias a Dios por tu vida, por haberte puesto
+      en mi camino y por permitirnos construir juntos nuestra
+      familia. Sé que no todo ha sido perfecto, pero cada
+      experiencia nos ha enseñado el valor de caminar juntos.
+    </p>
+
+    <p>
+      Quiero seguir tomándote de la mano, seguir compartiendo
+      sueños, alegrías y momentos especiales contigo.
+    </p>
+
+    <p>
+      Quiero que nunca dudes de cuánto te amo.
+      Eres una persona muy especial en mi vida y le pido
+      a Dios que continúe bendiciendo nuestro hogar.
+    </p>
+
+    <p>
+      Gracias por ser parte de mi historia.
+      Si pudiera volver a comenzar, quisiera encontrarte
+      nuevamente y volver a elegirte.
+    </p>
+
+    <h2>Te amo, Edreys. ❤️</h2>
+    <p>Con todo mi amor.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Y todavía tengo otra sorpresa... ❤️</h2>
+
+  <button class="corazon"
+    onclick="document.getElementById('finalCita').style.display='block'; this.style.display='none'">
+    ❤️
+  </button>
+
+  <p><strong>Toca aquí, mi amor</strong></p>
+
+  <div class="cita" id="finalCita">
+    <h1>¡TENEMOS UNA CITA! 💕</h1>
+    <h2>3 de diciembre de 2026</h2>
+    <p>Una cena juntos, tú y yo.</p>
+    <p>Una noche especial para seguir creando recuerdos.</p>
+    <h2>Te amo, mi vida. ❤️</h2>
+  </div>
+</section>
+
+<footer>
+  Hecha con amor para Edreys ❤️
+</footer>
+
+</main>
+
+<audio id="musica" src="mi-vida-sin-ti.m4a" preload="auto"></audio>
+
+<script>
+function abrirHistoria() {
+  document.getElementById("inicio").style.display = "none";
+  document.getElementById("historia").style.display = "block";
+
+  const musica = document.getElementById("musica");
+  musica.play().catch(() => {
+    console.log("No se pudo iniciar la música.");
+  });
+}
+</script>
+
+</body>
+</html>
