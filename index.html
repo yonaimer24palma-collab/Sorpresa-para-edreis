@@ -302,32 +302,39 @@ function abrirHistoria() {
   const inicio = new Date(2012, 9, 7);
   const ahora = new Date();
 
-  let años = ahora.getFullYear() - inicio.getFullYear();
-  let meses = ahora.getMonth() - inicio.getMonth();
-  let dias = ahora.getDate() - inicio.getDate();
+  let cursor = new Date(inicio);
+  let años = 0;
+  let meses = 0;
 
-  if (dias < 0) {
-    meses--;
-    dias += new Date(ahora.getFullYear(), ahora.getMonth(), 0).getDate();
+  while (true) {
+    let siguiente = new Date(cursor);
+    siguiente.setFullYear(siguiente.getFullYear() + 1);
+    if (siguiente > ahora) break;
+    cursor = siguiente;
+    años++;
   }
 
-  if (meses < 0) {
-    años--;
-    meses += 12;
+  while (true) {
+    let siguiente = new Date(cursor);
+    siguiente.setMonth(siguiente.getMonth() + 1);
+    if (siguiente > ahora) break;
+    cursor = siguiente;
+    meses++;
   }
 
-  let diferencia = Math.floor((ahora - inicio) / 1000);
+  let diferencia = Math.floor((ahora - cursor) / 1000);
+  let dias = Math.floor(diferencia / 86400);
   let horas = Math.floor(diferencia / 3600) % 24;
   let minutos = Math.floor(diferencia / 60) % 60;
   let segundos = diferencia % 60;
-    
-document.getElementById("años").textContent = años;
-document.getElementById("meses").textContent = meses;
-document.getElementById("dias").textContent = dias;
-document.getElementById("horas").textContent = horas;
-document.getElementById("minutos").textContent = minutos;
-document.getElementById("segundos").textContent = segundos;
-  }
+
+  document.getElementById("años").textContent = años;
+  document.getElementById("meses").textContent = meses;
+  document.getElementById("dias").textContent = dias;
+  document.getElementById("horas").textContent = horas;
+  document.getElementById("minutos").textContent = minutos;
+  document.getElementById("segundos").textContent = segundos;
+}
 
 actualizarContador();
 setInterval(actualizarContador, 1000);
