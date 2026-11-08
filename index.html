@@ -142,6 +142,19 @@ footer {
 </style>
 </head>
 <body>
+  
+<section id="inicio">
+  <h1>Para el amor de mi vida</h1>
+  <p>Tengo una sorpresa para ti, mi amor...</p>
+
+  <button class="corazon" onclick="abrirHistoria()">
+    ❤️
+  </button>
+
+  <p><strong>Toca el corazón, Edreis</strong></p>
+</section>
+
+<main id="historia">
   <section>
 <h2>Nuestra historia de amor</h2>
   <h1>7 de octubre de 2012</h1>
@@ -182,18 +195,6 @@ footer {
 
   <p>El día que comenzó nuestra historia, una historia que quiero seguir escribiendo contigo.</p>
 </section>
-<section id="inicio">
-  <h1>Para el amor de mi vida</h1>
-  <p>Tengo una sorpresa para ti, mi amor...</p>
-
-  <button class="corazon" onclick="abrirHistoria()">
-    ❤️
-  </button>
-
-  <p><strong>Toca el corazón, Edreis</strong></p>
-</section>
-
-<main id="historia">
 
 <section>
   <h1>Mi querida Edreis ❤️</h1>
@@ -319,11 +320,14 @@ function abrirHistoria() {
   let horas = Math.floor(diferencia / 3600) % 24;
   let minutos = Math.floor(diferencia / 60) % 60;
   let segundos = diferencia % 60;
-
-  document.getElementById("contador").textContent =
-    años + " años, " + meses + " meses, " + dias + " días, " +
-    horas + " horas, " + minutos + " minutos y " + segundos + " segundos ❤️";
-}
+    
+document.getElementById("años").textContent = años;
+document.getElementById("meses").textContent = meses;
+document.getElementById("dias").textContent = dias;
+document.getElementById("horas").textContent = horas;
+document.getElementById("minutos").textContent = minutos;
+document.getElementById("segundos").textContent = segundos;
+  }
 
 actualizarContador();
 setInterval(actualizarContador, 1000);
