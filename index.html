@@ -129,6 +129,8 @@ footer {
 <section>
   <h2>Nuestra historia de amor</h2>
   <h1>7 de octubre de 2012</h1>
+  <h3>El tiempo que llevamos juntos ❤️</h3>
+  <p id="contador"></p>
   <p>El día que comenzó nuestra historia, una historia que quiero seguir escribiendo contigo.</p>
 </section>
 
@@ -228,6 +230,36 @@ function abrirHistoria() {
     console.log("No se pudo iniciar la música.");
   });
 }
+  function actualizarContador() {
+  const inicio = new Date(2012, 9, 7);
+  const ahora = new Date();
+
+  let años = ahora.getFullYear() - inicio.getFullYear();
+  let meses = ahora.getMonth() - inicio.getMonth();
+  let dias = ahora.getDate() - inicio.getDate();
+
+  if (dias < 0) {
+    meses--;
+    dias += new Date(ahora.getFullYear(), ahora.getMonth(), 0).getDate();
+  }
+
+  if (meses < 0) {
+    años--;
+    meses += 12;
+  }
+
+  let diferencia = Math.floor((ahora - inicio) / 1000);
+  let horas = Math.floor(diferencia / 3600) % 24;
+  let minutos = Math.floor(diferencia / 60) % 60;
+  let segundos = diferencia % 60;
+
+  document.getElementById("contador").textContent =
+    años + " años, " + meses + " meses, " + dias + " días, " +
+    horas + " horas, " + minutos + " minutos y " + segundos + " segundos ❤️";
+}
+
+actualizarContador();
+setInterval(actualizarContador, 1000);
 </script>
 
 </body>
